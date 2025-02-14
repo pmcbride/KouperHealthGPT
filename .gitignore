@@ -1,0 +1,36 @@
+__pycache__/
+venv*
+.venv*
+.env*
+scratch
+.DS_Store
+.pytest_cache/
+*.egg*
+archive/
+examples/
+notebooks/
+notes/
+
+# log dir
+logs
+
+# scratch files
+*scratch*
+
+# VSCode Settings
+.vscode
+
+*Zone.Identifier
+
+*.json
+*.jsonl
+*.csv
+
+
+output/
+evaluation/
+
+*.[0-9]*
+*.bak
+research/
+huggingface/
