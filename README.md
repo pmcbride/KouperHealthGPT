@@ -37,58 +37,6 @@ You are provided the following:
 
 ## Data
 
-```yaml
-Patients:
-  - id: 1
-    name: John Doe
-    dob: 01/01/1975
-    pcp: Dr. Meredith Grey
-    ehrId: 1234abcd
-    referred_providers:
-      - provider: House, Gregory MD
-        specialty: Orthopedics
-      - specialty: Primary Care
-
-Provider Directory:
-  # Primary Care Providers:
-  - name: Grey, Meredith
-    certification: MD
-    specialty: Primary Care
-    departments:
-      - name: Sloan Primary Care
-        phone: (710) 555-2070
-        address: 202 Maple St, Winston-Salem, NC 27101
-        hours: M-F 9am-5pm
-
-  # Orthopedics Providers:
-  - name: House, Gregory
-    certification: MD
-    specialty: Orthopedics
-    departments:
-      - name: PPTH Orthopedics
-        phone: (445) 555-6205
-        address: 101 Pine St, Greensboro, NC 27401
-        hours: M-W 9am-5pm
-      - name: Jefferson Hospital
-        phone: (215) 555-6123
-        address: 202 Maple St, Claremont, NC 28610
-        hours: Th-F 9am-5pm
-
-Payment Information:
-  Accepted Insurances:
-    - Medicaid
-    - United Health Care
-    - Blue Cross Blue Shield of North Carolina
-    - Aetna
-    - Cigna
-
-  Self-pay:
-    - Primary Care: $150
-    - Orthopedics: $300
-    - Surgery: $1000
-```
-
-
 ### Patients:
 
 ```yaml
@@ -127,19 +75,6 @@ Payment Information:
 
 ```yaml
 # Description: This file contains the data for the providers in the system.
-
-Insurance Information:
-  Accepted Insurances:
-    - Medicaid
-    - United Health Care
-    - Blue Cross Blue Shield of North Carolina
-    - Aetna
-    - Cigna
-
-  Self-pay:
-    - Primary Care: $150
-    - Orthopedics: $300
-    - Surgery: $1000
 
 # Primary Care Providers:
 - name: Grey, Meredith
@@ -190,6 +125,22 @@ Insurance Information:
       phone: (710) 555-3082
       address: 456 Elm St, Charlotte, NC 28202
       hours: M-F 9am-5pm
+```
+
+### Insurance Information
+
+```yaml
+Accepted Insurances:
+  - Medicaid
+  - United Health Care
+  - Blue Cross Blue Shield of North Carolina
+  - Aetna
+  - Cigna
+
+Self-pay:
+  - Primary Care: $150
+  - Orthopedics: $300
+  - Surgery: $1000
 ```
 
 ## Solution
