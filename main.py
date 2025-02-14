@@ -421,7 +421,7 @@ def book_appointment(
     # Validate provider
     provider_data = get_provider_info(provider)
     if isinstance(provider_data, str):
-        return f"Error: Provider '{provider}' is not recognized."
+        return f"Error: Provider '{provider}' not found, please select from the available providers: {PROVIDER_NAMES}."
 
     # Validate appointment type
     if appointment_type not in ["NEW", "ESTABLISHED"]:
@@ -691,6 +691,8 @@ with gr.Blocks(css="#chatbot { height: 80vh !important; }") as demo:
                 """ Update the available hours text based on the selected provider. """
                 # available_hours = get_provider_hours(provider_name)
                 location_hours = get_provider_location_hours(provider_name)
+                if not location_hours:
+                    return ""
                 loc_hours_list = [f"{hours} ({loc})" for loc, hours in location_hours.items() if loc in location_name]
                 return "\n".join(loc_hours_list)
 
@@ -711,7 +713,7 @@ if __name__ == "__main__":
 # Mount the Gradio app at the '/ui' endpoint of the FastAPI app.
 # app.mount("/ui", demo.app)
 
-if __name__ == "__main__":
-    import uvicorn
-    # Run the FastAPI server with uvicorn.
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# if __name__ == "__main__":
+#     import uvicorn
+#     # Run the FastAPI server with uvicorn.
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
